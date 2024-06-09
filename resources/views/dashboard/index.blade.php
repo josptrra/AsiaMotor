@@ -16,8 +16,8 @@
     <h2>Tentang <span>Kami</span></h2>
 
     <div class="row">
-      <div class="image-wrapper">
-        <img src="img/about.jpg" width="100" alt="tentang kami" class="image" />
+      <div class="image-wrapper border-2 border-blue-600 rounded-2xl">
+        <img src="img/about.jpg" width="100" alt="tentang kami" class="image rounded-2xl" />
       </div>
       <div class="content">
         <h3>Selamat Datang di Asia Motor</h3>
@@ -96,12 +96,14 @@
   <!-- section contact end -->
 
   <!-- footer start -->
-  <footer class="footer">
-   
+  <footer class="footer h-24">
     <div class="wrapper">
       <a href="#home">Home</a>
+      <div class="w-[2px] bg-white h-full"></div>
       <a href="#about">Tentang Kami</a>
+      <div class="w-[2px] bg-white h-full"></div>
       <a href="#product">Paket Kami</a>
+      <div class="w-[2px] bg-white h-full"></div>
       <a href="#contact">Kontak</a>
     </div>
     <span>developed by <a href="#" target="_blank">Pemas</a> | © 2024</span>

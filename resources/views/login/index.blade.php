@@ -10,9 +10,9 @@
 
 </head>
 
-<body class="bg-[linear-gradient(90deg,_#28166F_-7.73%,_#4D2AD5_146.24%)]">
+<body class="bg-blue-300">
     <div class="w-full flex items-center justify-center h-screen">
-        <div class=" lg:flex w-full lg:border-4 lg:w-[45%] rounded-xl ">
+        <div class=" lg:flex w-full lg:border-4 lg:w-[45%] rounded-xl border-[#28166F]">
             <img class="rounded-lg hidden lg:block" src="img/login.png" alt="">
             <div class="bg-white w-10/12 mx-auto rounded-xl flex flex-col p-6 md:py-12">
                 <form action="/" method="post">
@@ -43,7 +43,7 @@
                     <button type="submit" class="mt-4 py-2 w-full text-center border-2 rounded-full border-[#28166F] hover:text-white hover:bg-[linear-gradient(90deg,_#28166F_-7.73%,_#4D2AD5_146.24%)] md:mt-6">Masuk</button>
                 </form>
                 <div class="w-11/12 mt-6 mx-auto h-[2px] bg-[linear-gradient(90deg,_#28166F_-7.73%,_#4D2AD5_146.24%)] mt-4"></div>
-                <p class="text-xs text-center mt-4 md:text-lg">Belum Memiliki Akun? <a href="/daftar" class="text-blue-400">Daftar disini!</a></p>
+                <p class="text-xs text-center mt-4 md:text-lg">Belum Memiliki Akun? <a href="/daftar" class="text-blue-600">Daftar disini!</a></p>
             </div>
         </div>
     </div>

@@ -19,6 +19,8 @@
   
   <title>Jual Beli Motor</title>
 
+  @vite('resources/css/app.css')
+
 </head>
 <body>
     

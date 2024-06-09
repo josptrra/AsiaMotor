@@ -9,7 +9,7 @@
   <title>Paket</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css' />
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' />
-  
+
 
 </head>
 
@@ -31,9 +31,9 @@
           <a class="nav-link" href="#"><i class="fas fa-th-list mr-2"></i>Produk</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i> 
+          <a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i>
             <span id="cart-item" class="badge badge-danger">
-                {{ session('cartItemCount', 0) }}
+              {{ session('cartItemCount', 0) }}
             </span>
           </a>
         </li>
@@ -45,27 +45,27 @@
   <!-- Displaying Products Start -->
   <div class="container">
     @if (session()->has('successCart'))
-        <div class="alert alert-success mt-3">
-            <p class="fw-bold">{{ session('successCart') }}</p>
-        </div>
+    <div class="alert alert-success mt-3">
+      <p class="fw-bold">{{ session('successCart') }}</p>
+    </div>
     @endif
 
     @if (session()->has('failCart'))
-        <div class="alert alert-danger mt-3">
-            <p class="fw-bold">{{ session('failCart') }}</p>
-        </div>
+    <div class="alert alert-danger mt-3">
+      <p class="fw-bold">{{ session('failCart') }}</p>
+    </div>
     @endif
 
     <div class="row mt-2 pb-3">
 
-        @foreach ($datas as $data)
+      @foreach ($datas as $data)
 
       <!-- <div class="col-md-4 col-lg-4 mb-3"> -->
       <div class="col-sm-6 col-md-4 col-lg-4 mb-2">
         <div class="card-deck">
           <div class="card p-2 border-secondary mb-2">
             <img src="<?= $data['product_image'] ?>" class="card-img-top" height="250">
-            
+
             <div class="card-body p-1">
               <h4 class="card-title text-center text-info"><?= $data['product_name'] ?></h4>
               <h5 class="card-text text-center text-danger">Rp. <?= number_format(intval($data['product_price']), 0, ',', '.') ?></h5>
@@ -80,7 +80,7 @@
                     <b>Stok: </b><?= $data['product_qty'] ?>
                   </div>
                   <div class="col-md-6">
-                    <input type="number" name="pqty" class="form-control pqty" value="1" >
+                    <input type="number" name="pqty" class="form-control pqty" value="1">
                   </div>
                 </div>
                 <input type="hidden" name="pname" class="pname" value="<?= $data['product_name'] ?>">
@@ -94,7 +94,7 @@
           </div>
         </div>
       </div>
-                
+
       @endforeach
     </div>
   </div>
@@ -125,11 +125,11 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
 
   <script type="text/javascript">
-      // Display product detail in the modal
-      $(".viewDetailBtn").click(function() {
-        var detail = $(this).data('detail');
-        $("#detailContent").text(detail);
-      });
+    // Display product detail in the modal
+    $(".viewDetailBtn").click(function() {
+      var detail = $(this).data('detail');
+      $("#detailContent").text(detail);
+    });
   </script>
 
 </body>
