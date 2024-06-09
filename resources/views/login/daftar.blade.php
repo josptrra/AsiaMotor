@@ -1,71 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Daftar Akun</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar Akun</title>
 </head>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+@vite('resources/css/app.css')
 
-<body>
-    <!-- Daftar -->
-    <section class="vh-100" style="background-color: #64cbed;">
-      <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col col-xl-10">
-            <div class="card" style="border-radius: 1rem;">
-              <div class="row g-0">
-                <div class="col-md-6 col-lg-5 d-none d-md-block">
-                  <img src="img/login.png"
-                    alt="daftar form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
-                </div>
-                <div class="col-md-6 col-lg-7 d-flex align-items-center">
-                  <div class="card-body p-4 p-lg-5 text-black">
-
-                    <form action="/daftar" method="post">
-                    @csrf
-                      <div class="d-flex align-items-center mb-3 pb-1">
-                        <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                        <span class="h1 fw-bold mb-0">Daftar</span>
-                      </div>
-
-                      <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Buat Akun Baru</h5>
-
-                      <div class="form-outline mb-4">
-                      <label class="form-label">Nama</label>  
-                      <input type="text" name="name" class="form-control form-control-lg" required />
-                        
-                      </div>
-
-                      <div class="form-outline mb-4">
-                        <label class="form-label">Username</label>
-                        <input type="text" name="username" class="form-control form-control-lg" required/>
-                        
-                      </div>
-
-                      <div class="form-outline mb-4">
-                        <label class="form-label">Password</label>
-                        <input type="password" name="password" class="form-control form-control-lg" required/>
-                        
-                      </div>
-
-                      <div class="pt-1 mb-4">
-                        <button class="btn btn-primary btn-block" type="submit" >Daftar</button>
-                       
-                        <a class="btn btn-danger btn-user btn-block" href="/">
-                          Kembali
-                       </a>
-
-                      </div>
-                    </form>
-
-                  </div>
-                </div>
-              </div>
-            </div>
+<body class="bg-[linear-gradient(90deg,_#28166F_-7.73%,_#4D2AD5_146.24%)]">
+  <div class="w-full flex items-center justify-center h-screen">
+    <div class=" lg:flex w-full lg:border-4 lg:w-[45%] rounded-xl ">
+      <img class="rounded-lg hidden lg:block" src="img/login.png" alt="">
+      <div class="bg-white w-10/12 mx-auto rounded-xl flex flex-col p-6 md:py-12">
+        <form action="/daftar" method="post">
+          @csrf
+          <h1 class="text-3xl md:text-4xl font-bold">Daftar</h1>
+          <h2 class="text-md md:text-xl py-2 md:my-4 font-semibold">Registrasi dan jelajahilah <span class="bg-[linear-gradient(90deg,_#28166F_-7.73%,_#4D2AD5_146.24%)] inline-block text-transparent bg-clip-text">AsiaMotor!</span></h2>
+          <div class="flex flex-col">
+            <h2 class="text-base md:text-xl">Nama</h2>
+            <input type="text" name="name" class="p-2 py-3 border-2 w-full text-xs rounded-lg my-2 md:my-2 border-[#28166F] md:text-[14px]" placeholder="Masukkan Nama Lengkap Anda">
           </div>
-        </div>
+          <div class="flex flex-col">
+            <h2 class="text-base md:text-xl">Username</h2>
+            <input type="text" name="username" class="p-2 py-3 border-2 w-full text-xs rounded-lg my-2 md:my-2 border-[#28166F] md:text-[14px]" placeholder="Masukkan Username Anda">
+          </div>
+          <div class="flex flex-col">
+            <h2 class="text-base md:text-xl">Password</h2>
+            <input type="password" name="password" class="p-2 py-3 border-2 w-full text-xs rounded-lg my-2 border-[#28166F] md:text-[14px] md:my-2" placeholder="Masukkan Password Anda">
+          </div>
+          <button type="submit" class="mt-4 py-2 w-full text-center border-2 rounded-full border-[#28166F] hover:text-white hover:bg-[linear-gradient(90deg,_#28166F_-7.73%,_#4D2AD5_146.24%)] md:mt-6">Daftar</button>
+        </form>
+        <div class="w-11/12 mt-6 mx-auto h-[2px] bg-[linear-gradient(90deg,_#28166F_-7.73%,_#4D2AD5_146.24%)] mt-4"></div>
+        <p class="text-xs text-center mt-4 md:text-lg">Sudah Memiliki Akun? <a href="/" class="text-blue-400">Masuk disini!</a></p>
       </div>
-    </section>
+    </div>
+  </div>
 </body>
+
 </html>

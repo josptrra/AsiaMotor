@@ -25,6 +25,6 @@ class daftarController extends Controller
 
         User::Create($validatedData);
 
-        return redirect('/')->with('success', 'Registrasi berhasil. Silakan login menggunakan akun yang baru dibuat.');
+        return redirect('/')->with('success', 'Registrasi berhasil. Silakan login menggunakan akun Anda.');
     }
 }
